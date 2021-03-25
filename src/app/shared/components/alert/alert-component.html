@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Sucesso!</h1>
+<div mat-dialog-content>
+  <p>A Lista de tarefas foi salva com sucesso!</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button cdkFocusInitial [mat-dialog-close]="true">{{btnSucess}}</button>
+  <button mat-raised-button color="warn" [mat-dialog-close]="false" *ngIf="haveBtnClose" >{{btnCancel}}</button>
+</div>

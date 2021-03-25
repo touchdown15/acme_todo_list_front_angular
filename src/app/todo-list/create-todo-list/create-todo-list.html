@@ -1,0 +1,32 @@
+<mat-toolbar class="app-title">Cadastrar Lista de Tarefas</mat-toolbar>
+<div class="main-div">
+  <mat-card class="center width50" *ngIf="cadastro" >
+    <form autocomplete="off" novalidate [formGroup]="cadastro" (ngSubmit)="submit()" (ngReset)="restartForm()">
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Titulo da lista *</mat-label>
+        <input matInput placeholder="Ex. Estudos 2020" name="nameList" formControlName="nameList">
+        <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && c.nameList.errors?.required">CAMPO OBRIGATÓRIO</mat-error>
+      </mat-form-field>
+
+      <ng-container *ngFor="let item of task.controls; let i = index;">
+
+        <div [formGroup] ="item">
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Tarefa *</mat-label>
+            <input matInput placeholder="Ex. Estudar NoSQL " name="nameTask" formControlName="nameTask">
+          </mat-form-field>
+
+        </div>
+
+      </ng-container>
+
+
+      <mat-card-actions>
+        <button type="submit" color="accent" mat-raised-button>Salvar</button>
+        <button type="reset" color="warn" mat-raised-button>Cancelar</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>
