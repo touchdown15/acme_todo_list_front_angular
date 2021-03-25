@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { TodoListService } from 'src/app/services/todo-list-service';
 import { AlertComponent } from 'src/app/shared/components/alert/alert-component';
+import { Alert } from 'src/app/shared/models/alert';
 import { TodoList } from 'src/app/shared/models/todo-list';
 
 @Component({
@@ -70,8 +71,15 @@ export class CreateTodoListComponent implements OnInit {
       })
     },
     () => {
-      alert('ERRO')
-    })
+      const config = {
+        data: {
+          title: 'Erro ao salvar a lista',
+          description: 'Não foi possivel salvar a lista, favor tentar novamente.',
+          btnSucess: 'Fechar'
+        } as Alert
+      };
+      this.dialog.open(AlertComponent, config);
+    });
   }
 
 }
