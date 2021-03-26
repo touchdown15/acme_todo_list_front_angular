@@ -1,32 +1,36 @@
-<div>
+<div class="container-new-task">
 
-  Criação de novas tarefas
+  <div class="box-new-task">
 
-  <button type="button" (click)="ShowNHide()">
-    <i class="bi bi-plus-square"></i>
-  </button>
+    Criação de novas tarefas
 
-  <div [hidden]="showNHide">
+    <button class="btn-plus" type="button" (click)="ShowNHide()">
+      <i class="bi bi-plus-square"></i>
+    </button>
 
-    <form autocomplete="off" novalidate [formGroup]="cadastroTask" (ngSubmit)="submit()">
+    <div [hidden]="showNHide">
 
-      <ng-container *ngFor="let item of task.controls; let i = index;">
+      <form autocomplete="off" novalidate [formGroup]="cadastroTask" (ngSubmit)="submit()">
 
-        <div [formGroup] ="item">
+        <ng-container *ngFor="let item of task.controls; let i = index;">
 
-          <mat-form-field class="example-full-width">
-            <mat-label>Tarefa *</mat-label>
-            <input matInput placeholder="Ex. Estudar NoSQL " name="nameTask" formControlName="nameTask">
-          </mat-form-field>
+          <div [formGroup] ="item">
 
-        </div>
+            <mat-form-field class="example-full-width">
+              <mat-label>Tarefa *</mat-label>
+              <input matInput placeholder="Ex. Estudar NoSQL " name="nameTask" formControlName="nameTask">
+            </mat-form-field>
 
-      </ng-container>
+          </div>
 
-      <mat-card-actions>
-        <button type="submit" color="accent" mat-raised-button>Salvar</button>
-      </mat-card-actions>
-    </form>
+        </ng-container>
+
+        <mat-card-actions class="btnSave">
+          <button type="submit" color="accent" mat-raised-button>Salvar</button>
+        </mat-card-actions>
+      </form>
+
+    </div>
 
   </div>
 

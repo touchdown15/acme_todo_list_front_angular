@@ -1,0 +1,16 @@
+.container-new-todo-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.app-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-div{
+  margin: 10px;
+}
