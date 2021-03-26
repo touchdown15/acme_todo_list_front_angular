@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 import { TodoList } from '../shared/models/todo-list';
 
-const url = 'http://localhost:8080/'
+const url = 'https://acme-todo-list.herokuapp.com/'
 
 @Injectable({
   providedIn: 'root'
