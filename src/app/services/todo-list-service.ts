@@ -30,4 +30,8 @@ export class TodoListService {
     return this.http.put<void>(url+'api/v1/todolist/addtask/'+id, todolist);
   }
 
+  toggleDoneTask(done: string, id: number): Observable<void> {
+    return this.http.put<void>(url+'api/v1/task/donetask/'+id, done);
+  }
+
 }

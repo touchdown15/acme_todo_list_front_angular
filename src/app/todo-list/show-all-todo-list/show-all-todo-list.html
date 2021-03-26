@@ -2,9 +2,7 @@
   <h2>{{todo.nameList}}</h2>
   <create-task-todo-list [todoId]="todo.id"></create-task-todo-list>
   <div *ngFor="let task of todo.task">
-    <mat-checkbox color="primary">
-      {{task.nameTask}}
-    </mat-checkbox>
+    <toggle-done-task-todo-list [taskName]="task.nameTask" [taskId]="task.id" [isDoneTask]="task.done"></toggle-done-task-todo-list>
     <delete-task-todo-list [taskId]="task.id" ></delete-task-todo-list>
   </div>
 </mat-card>
