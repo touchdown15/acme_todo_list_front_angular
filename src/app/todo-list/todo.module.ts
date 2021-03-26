@@ -5,12 +5,14 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from '../shared/material/material-module';
 import { CreateTodoListComponent } from './create-todo-list/create-todo-list';
 import { ShowTodoListComponent } from './show-all-todo-list/show-all-todo-list';
+import { DeleteTaskTodoListComponent } from './delete-task-todo-list/delete-task-todo-list';
 
 
 @NgModule({
   declarations: [
     CreateTodoListComponent,
-    ShowTodoListComponent
+    ShowTodoListComponent,
+    DeleteTaskTodoListComponent
   ],
   imports: [
     CommonModule,

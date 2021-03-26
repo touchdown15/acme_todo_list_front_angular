@@ -5,7 +5,6 @@ import { Observable } from 'rxjs';
 
 import { TodoList } from '../shared/models/todo-list';
 
-
 const url = 'http://localhost:8080/'
 
 @Injectable({
@@ -23,5 +22,12 @@ export class TodoListService {
     return this.http.get<TodoList[]>(url+'api/v1/todolist');
   }
 
+  removeTask(id: number): Observable<void> {
+    return this.http.delete<void>(url+'api/v1/task/'+id);
+  }
+
+  saveTask(todolist : TodoList, id: number): Observable<void> {
+    return this.http.put<void>(url+'api/v1/todolist/addtask/'+id, todolist);
+  }
 
 }

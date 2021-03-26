@@ -39,15 +39,11 @@ export class CreateTodoListComponent implements OnInit {
 
   submit(): void {
     this.cadastro.markAllAsTouched();
-
     if(this.cadastro.invalid){
       return;
     }
-
     const todoList = this.cadastro.getRawValue() as TodoList;
-
     this.saving(todoList);
-
   }
 
   addTask() {

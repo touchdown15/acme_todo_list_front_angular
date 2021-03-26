@@ -4,8 +4,6 @@
     <mat-checkbox color="primary">
       {{task.nameTask}}
     </mat-checkbox>
-    <button>
-      <i class="bi bi-trash"></i>
-    </button>
+    <delete-task-todo-list [taskId]="task.id" ></delete-task-todo-list>
   </div>
 </mat-card>
