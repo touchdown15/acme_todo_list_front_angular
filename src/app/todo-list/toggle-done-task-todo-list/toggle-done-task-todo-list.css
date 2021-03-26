@@ -1,0 +1,7 @@
+.checked-task-done{
+  text-decoration: line-through;
+}
+
+.checked-task-undone{
+  text-decoration: dashed;
+}

@@ -1,3 +1,6 @@
-<mat-checkbox color="primary" (change)="toggleTask()" [checked]="isDoneTask">
+<mat-checkbox [ngClass]="{'checked-task-done' : isDoneTask === true, 'checked-task-undone' : isDoneTask === false }"
+              color="primary"
+              (change)="toggleTask()"
+              [checked]="isDoneTask">
   {{taskName}}
 </mat-checkbox>
