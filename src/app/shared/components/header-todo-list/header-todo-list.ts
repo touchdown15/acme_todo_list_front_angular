@@ -4,7 +4,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 @Component({
   selector: 'header-todo-list',
   templateUrl: './header-todo-list.html',
-  styleUrls: ['./header-todo-list.scss']
+  styleUrls: ['./header-todo-list.css']
 })
 export class HeaderTodoListComponent implements OnInit {
   @ViewChild('sidenav', {static: false}) sidenav: MatSidenav;

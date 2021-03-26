@@ -1,3 +1,11 @@
-<div>
-  Show all
-</div>
+<mat-card *ngFor="let todo of todoList">
+  <h2>{{todo.nameList}}</h2>
+  <div *ngFor="let task of todo.task">
+    <mat-checkbox color="primary">
+      {{task.nameTask}}
+    </mat-checkbox>
+    <button>
+      <i class="bi bi-trash"></i>
+    </button>
+  </div>
+</mat-card>

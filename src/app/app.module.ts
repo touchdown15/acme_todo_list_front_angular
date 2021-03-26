@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { MaterialModule } from './shared/material/material-module';
 
@@ -10,8 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HeaderTodoListComponent } from './shared/components/header-todo-list/header-todo-list';
 import { AlertComponent } from './shared/components/alert/alert-component';
-
-
 
 
 @NgModule({
@@ -25,7 +24,8 @@ import { AlertComponent } from './shared/components/alert/alert-component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
