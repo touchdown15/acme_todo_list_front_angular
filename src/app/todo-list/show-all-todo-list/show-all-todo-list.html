@@ -1,5 +1,6 @@
 <mat-card *ngFor="let todo of todoList">
   <h2>{{todo.nameList}}</h2>
+  <create-task-todo-list [todoId]="todo.id"></create-task-todo-list>
   <div *ngFor="let task of todo.task">
     <mat-checkbox color="primary">
       {{task.nameTask}}

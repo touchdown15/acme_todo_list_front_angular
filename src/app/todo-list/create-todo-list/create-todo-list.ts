@@ -13,7 +13,6 @@ import { TodoList } from 'src/app/shared/models/todo-list';
   styleUrls: ['./create-todo-list.css']
 })
 export class CreateTodoListComponent implements OnInit {
-  title = 'createtodolist-angular';
 
   cadastro: FormGroup;
 
